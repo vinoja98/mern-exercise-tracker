@@ -80,6 +80,7 @@ export class CreateExercise extends Component {
     render() {
         return (
             <div>
+                <div className='container' style={{backgroundColor:'gold'}}>
               <h3>Create New Exercise Log</h3>
               <form onSubmit={this.onSubmit}>
                
@@ -127,8 +128,9 @@ export class CreateExercise extends Component {
                 <div className='form-group'>
                     <input type='submit' value='Create Exercise Log' className='btn btn-primary'/>
                 </div>
+                <br/><br/><br/>
               </form>
-              
+              </div>
             </div>
         )
     }

@@ -37,6 +37,7 @@ export class CreateUser extends Component {
     render() {
         return (
             <div>
+                <div className='container' style={{backgroundColor:'gold'}}>
                 <h3>Create New User</h3>
               <form onSubmit={this.onSubmit}>
               <div className='form-group'>
@@ -54,7 +55,9 @@ export class CreateUser extends Component {
                 <div className='form-group'>
                     <input type='submit' value='Create User' className='btn btn-primary'/>
                 </div>
+                <br/><br/><br/>
               </form>
+            </div>
             </div>
         )
     }

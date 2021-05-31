@@ -9,8 +9,8 @@ const Exercise=props=>(
         <td>{props.exercise.description}</td>
         <td>{props.exercise.duration}</td>
         <td>{props.exercise.date.substring(0,10)}</td>
-        <td><Link to={"/edit/"+props.exercise._id} className="navbar-brand " >edit</Link></td>
-        <td><button className='btn btn-outline-info' >
+        <td><Link to={"/edit/"+props.exercise._id} className="navbar-brand " style={{color:'black'}} >edit</Link></td>
+        <td><button className='btn btn-outline-primary' >
             <a href="#" onClick={
                 ()=>{props.deleteExercise(props.exercise._id)}
             }><div style={{color:'black'}}>delete</div></a>
@@ -56,10 +56,11 @@ export class ExercisesList extends Component {
     render() {
         return (
             <div>
+               
+               <div className="container" style={{overflowY:'auto'}}>
                <h3>Exercises List</h3>
-               <div className="main-container" style={{overflowY:'auto'}}>
                <div className="table-responsive" >
-                <table className="table table-striped" >
+                <table className="table table-striped" style={{backgroundColor:'rgb(20, 200, 213)'}} >
                     <thead style={{backgroundColor:'yellow'}} >
                     <tr>
                         <th>User </th>

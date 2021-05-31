@@ -91,7 +91,7 @@ export class EditExercises extends Component {
     render() {
         return (
             <div>
-              <h3>Edit Exercise Log</h3>
+                 <div className='container' style={{backgroundColor:'gold'}}>
               <form onSubmit={this.onSubmit}>
                 <div className='form-group'>
                     <label className="form-label" >Username :</label>
@@ -139,6 +139,7 @@ export class EditExercises extends Component {
                 </div>
               </form>
               
+            </div>
             </div>
         )
     }
