@@ -8,7 +8,7 @@ export class Navbar extends Component {
 
     render() {
         return (
-           <nav className="navbar navbar-expand navbar-light bg-info navbar shadow-md" style={{width:'100%'}}>
+           <nav className="navbar navbar-expand navbar-light navbar shadow-md" style={{width:'100%',backgroundColor:'#14505c'}}>
                <div className="navbar-brand " style={{color:'black',marginLeft:'10%',fontSize:'40px'}}>ExerciseTracker</div>
                 <div className="collapse navbar-collapse" >
                     <ul className="navbar-nav mr-auto" >

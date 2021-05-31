@@ -60,8 +60,8 @@ export class ExercisesList extends Component {
                <div className="container" style={{overflowY:'auto'}}>
                <h3>Exercises List</h3>
                <div className="table-responsive" >
-                <table className="table table-striped" style={{backgroundColor:'rgb(20, 200, 213)'}} >
-                    <thead style={{backgroundColor:'yellow'}} >
+                <table className="table table-striped" style={{backgroundColor:'#3FEEE6'}} >
+                    <thead style={{backgroundColor:'#45A29E'}} >
                     <tr>
                         <th>User </th>
                         <th>Exercise </th>

@@ -37,7 +37,8 @@ export class CreateUser extends Component {
     render() {
         return (
             <div>
-                <div className='container' style={{backgroundColor:'gold'}}>
+                <div className='container' style={{backgroundColor: 'rgb(63,238,230)',
+background: 'linear-gradient(90deg, rgba(63,238,230,1) 0%, rgba(69,162,158,1) 35%, rgba(2,30,36,1) 100%)'}}>
                 <h3>Create New User</h3>
               <form onSubmit={this.onSubmit}>
               <div className='form-group'>
@@ -50,7 +51,7 @@ export class CreateUser extends Component {
                 </div>
                 <br/>
                 <br/>
-                
+            
                 <br/><br/><br/>
                 <div className='form-group'>
                     <input type='submit' value='Create User' className='btn btn-primary'/>

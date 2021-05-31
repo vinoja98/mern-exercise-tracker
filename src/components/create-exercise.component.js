@@ -80,7 +80,8 @@ export class CreateExercise extends Component {
     render() {
         return (
             <div>
-                <div className='container' style={{backgroundColor:'gold'}}>
+                <div className='container' style={{backgroundColor: 'rgb(63,238,230)',
+background: 'linear-gradient(90deg, rgba(63,238,230,1) 0%, rgba(69,162,158,1) 35%, rgba(2,30,36,1) 100%)'}}>
               <h3>Create New Exercise Log</h3>
               <form onSubmit={this.onSubmit}>
                

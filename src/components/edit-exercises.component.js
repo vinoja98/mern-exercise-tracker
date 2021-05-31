@@ -91,7 +91,8 @@ export class EditExercises extends Component {
     render() {
         return (
             <div>
-                 <div className='container' style={{backgroundColor:'gold'}}>
+                 <div className='container' style={{backgroundColor: 'rgb(63,238,230)',
+background: 'linear-gradient(90deg, rgba(63,238,230,1) 0%, rgba(69,162,158,1) 35%, rgba(2,30,36,1) 100%)'}}>
               <form onSubmit={this.onSubmit}>
                 <div className='form-group'>
                     <label className="form-label" >Username :</label>
