@@ -124,15 +124,15 @@ background: 'linear-gradient(90deg, rgba(63,238,230,1) 0%, rgba(69,162,158,1) 35
                     <label className="form-label"  >Duration(in minutes) :</label>
                     <input type='text'
                     required
-                    className='form-control' style={{width:'182px'}}
+                    className='form-control' style={{width:'165px'}}
                     value={this.state.duration}
                     onChange={this.onChangeDuration}/>
                 </div>
                 <br/>
                 <div className='form-group'>
                     <label  className="form-label"  >Date :</label>
-                    <div>
-                        <DatePicker
+                    <div >
+                        <DatePicker 
                         selected={this.state.date}
                         onChange={this.onChangeDate}/>
                     </div>
