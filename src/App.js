@@ -5,7 +5,6 @@ import {BrowserRouter as Router, Route,Switch} from "react-router-dom"
 import Navbar from "./components/navbar.component";
 import ExercisesList  from "./components/exercises-list.component";
 import CreateExercise  from "./components/create-exercise.component";
-import EditExercise from "./components/edit-exercises.component";
 import CreateUser from "./components/create-user.component";
 import UsersList from "./components/users-list.component";
 
