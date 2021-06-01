@@ -39,12 +39,13 @@ export class ExercisesList extends Component {
 
          deleteExercise(id){
             axios.delete('http://localhost:5000/exercises/'+id)
-            .then(res=>console.log(res.data)) 
+            .then(res=>{console.log(res.data) 
 
             //update list after one is deleted
                 this.setState({
                     exercises:this.state.exercises.filter(el=>el._id!==id)
                 })
+            })
             .catch((error) =>{ alert(error); }); }
             
             exercisesList(){
