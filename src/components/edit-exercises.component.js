@@ -3,6 +3,8 @@ import axios from 'axios'
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
 
+
+
 export class EditExercises extends Component {
     constructor(props) {
         super(props)
@@ -25,7 +27,7 @@ export class EditExercises extends Component {
     
     //react lifecycle method occurs when loading the page
     componentDidMount(){
-        axios.get('http://localhost:5000/exercises/'+this.props.match.params.id)
+        axios.get('http://localhost:5000/exercises/'+this.props.id)
         .then((response) =>  
             this.setState({
                 username:response.data.username,
@@ -82,7 +84,7 @@ export class EditExercises extends Component {
             date:this.state.date
         }
         console.log(exercise)
-        axios.post('http://localhost:5000/exercises/update/'+this.props.match.params.id,exercise)
+        axios.post('http://localhost:5000/exercises/update/'+this.props.id,exercise)
         .then((response) => { if(response){ alert("OK"); }else{ alert('NOT OK'); } }).catch(function (error) { alert(error); }); 
        
         window.location='/'  //go back to home page after update
@@ -90,7 +92,9 @@ export class EditExercises extends Component {
     
     render() {
         return (
+            
             <div>
+                <br/><br/>
                  <div className='container' style={{backgroundColor: 'rgb(63,238,230)',
 background: 'linear-gradient(90deg, rgba(63,238,230,1) 0%, rgba(69,162,158,1) 35%, rgba(2,30,36,1) 100%)'}}>
               <form onSubmit={this.onSubmit}>

@@ -17,6 +17,7 @@ connection.once('open',()=>{
     console.log('mongodb connection established successfully');
 });
 
+
 const exercisesRouter=require('./routes/exercises')
 const usersRouter=require('./routes/users')
 

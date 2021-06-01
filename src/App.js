@@ -20,7 +20,7 @@ function App() {
        <Switch>
        <Route exact path="/"  component={ExercisesList}/>
        <Route exact path="/create"  component={CreateExercise}/>
-       <Route exact path="/edit/:id"  component={EditExercise}/>
+       {/* <Route exact path="/edit/:id"  component={EditExercise}/> */}
        <Route exact path="/user"  component={CreateUser}/>
        <Route exact path="/userslist"  component={UsersList}/>
        </Switch>

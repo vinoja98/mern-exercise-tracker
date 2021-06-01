@@ -14,13 +14,13 @@ export class Navbar extends Component {
                 <div className="collapse navbar-collapse" >
                     <ul className="navbar-nav mr-auto" >
                         <li className="nav-item active" style={{fontSize:'30px'}}>
-                            <NavLink exact activeClassName="active" to="/" className="nav-link" >Exercises</NavLink>
+                            <NavLink exact activeClassName="active" to="/" className="nav-link" >Exercises|</NavLink>
                         </li>
                         <li className="nav-item" style={{fontSize:'30px'}}>
-                            <NavLink exact activeClassName="active" to="/create" className="nav-link" >Create Exercises Log</NavLink>
+                            <NavLink exact activeClassName="active" to="/create" className="nav-link" >Create Exercises Log|</NavLink>
                         </li>
                         <li className="nav-item" style={{fontSize:'30px'}}>
-                            <NavLink exact activeClassName="active" to="/user" className="nav-link" >Create User</NavLink>
+                            <NavLink exact activeClassName="active" to="/user" className="nav-link" >Create User|</NavLink>
                         </li>
                         <li className="nav-item" style={{fontSize:'30px'}}>
                             <NavLink exact activeClassName="active" to="/userslist" className="nav-link" >Users</NavLink>

@@ -1,19 +1,29 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from 'react'
-import {Link} from "react-router-dom"
+
 import axios from 'axios'
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
+import EditExercises from './edit-exercises.component'
 
 const Exercise=props=>(
+    
     <tr>
         <td>{props.exercise.username}</td>
         <td>{props.exercise.description}</td>
         <td>{props.exercise.duration}</td>
         <td>{props.exercise.date.substring(0,10)}</td>
-        <td><Link to={"/edit/"+props.exercise._id} className="navbar-brand " style={{color:'black'}} >edit</Link></td>
+        <td>
+            {/* <Link to={"/edit/"+props.exercise._id} className="navbar-brand " style={{color:'black'}} >edit</Link> */}
+            <Popup trigger={<button className='btn btn-outline-primary' > Edit</button>} position="right center">
+                <div><EditExercises id={props.exercise._id}></EditExercises></div>
+            </Popup>
+            
+        </td>
         <td><button className='btn btn-outline-primary' >
             <a href="#" onClick={
                 ()=>{props.deleteExercise(props.exercise._id)}
-            }><div style={{color:'black'}}>delete</div></a>
+            }>delete</a>
         </button></td>
     </tr>
 )
@@ -66,7 +76,7 @@ export class ExercisesList extends Component {
                     <tr>
                         <th>User </th>
                         <th>Exercise </th>
-                        <th>Duration</th>
+                        <th>Duration(in minutes)</th>
                         <th>Date</th>
                         <th>Edit</th>
                         <th>Delete</th>

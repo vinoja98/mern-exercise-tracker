@@ -33,4 +33,19 @@ router.route('/:id').delete((req,res)=>{
      
  })
 
+ 
+ router.route('/update/:id').post((req,res)=>{
+    User.findById(req.params.id)
+    .then(exercise=>{
+            exercise.username=req.body.username
+           
+            
+            //save to mongodb database
+            exercise.save()
+            .then(()=>res.json('Exercise updated'))
+            .catch(err=>res.status(400).json('Error: '+err))
+        })
+        .catch(err=>res.status(400).json('Error: '+err))
+    })
+
 module.exports=router
