@@ -80,22 +80,24 @@ export class CreateExercise extends Component {
     render() {
         return (
             <div>
-                <div className='container' style={{backgroundColor: 'rgb(63,238,230)',
-background: 'linear-gradient(90deg, rgba(63,238,230,1) 0%, rgba(69,162,158,1) 35%, rgba(2,30,36,1) 100%)'}}>
+                <div className='container' style={{
+                    backgroundColor: 'rgb(63,238,230)',
+                    background: 'linear-gradient(90deg, rgba(63,238,230,1) 0%, rgba(69,162,158,1) 35%, rgba(2,30,36,1) 100%)'}}>
               <h3>Create New Exercise Log</h3>
               <form onSubmit={this.onSubmit}>
                
                 <div className='form-group'>
                     <label className="form-label" >Username :</label>
-                    <select ref={this.userInput}
-                    required
-                    className='custom-select form-control '
-                    value={this.state.username}
-                    onChange={this.onChangeUsername}>
-                        {this.state.users.map(function(user){
-                            return<option key={user} value={user}>{user}</option>
-                        })}
-                    </select>
+                   
+                            <select class="form-select" aria-label="Default select example" ref={this.userInput}
+                            required 
+                            value={this.state.username}
+                            onChange={this.onChangeUsername}>
+                                {this.state.users.map(function(user){
+                                    return<option key={user} value={user}>{user}</option>
+                                })}
+                            </select>
+                  
                     </div>
          
                 <br/>
@@ -112,7 +114,7 @@ background: 'linear-gradient(90deg, rgba(63,238,230,1) 0%, rgba(69,162,158,1) 35
                     <label className="form-label"  >Duration(in minutes) :</label>
                     <input type='text'
                     required
-                    className='form-control'
+                    className='form-control' style={{width:'182px'}}
                     value={this.state.duration}
                     onChange={this.onChangeDuration}/>
                 </div>

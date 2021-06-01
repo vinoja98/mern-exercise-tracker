@@ -96,9 +96,8 @@ background: 'linear-gradient(90deg, rgba(63,238,230,1) 0%, rgba(69,162,158,1) 35
               <form onSubmit={this.onSubmit}>
                 <div className='form-group'>
                     <label className="form-label" >Username :</label>
-                    <select ref={this.userInput}
+                    <select class="form-select" aria-label="Default select example" ref={this.userInput}
                     required
-                    className='form-control' id="exampleFormControlInput1"
                     value={this.state.username}
                     onChange={this.onChangeUsername}>
                         {this.state.users.map(function(user){
@@ -121,7 +120,7 @@ background: 'linear-gradient(90deg, rgba(63,238,230,1) 0%, rgba(69,162,158,1) 35
                     <label className="form-label"  >Duration(in minutes) :</label>
                     <input type='text'
                     required
-                    className='form-control'
+                    className='form-control' style={{width:'182px'}}
                     value={this.state.duration}
                     onChange={this.onChangeDuration}/>
                 </div>

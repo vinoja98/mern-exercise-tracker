@@ -30,8 +30,12 @@ export class CreateUser extends Component {
         }
         console.log(user)
         axios.post('http://localhost:5000/users/add',user)
-        .then((response) => { if(response){ alert("OK"); }else{ alert('NOT OK'); } }).catch(function (error) { alert('NOT OK.'); }); } catch (err) { alert('NOT OK.'); 
-       
+        .then((response) => { if(response){ alert("OK");     this.setState({
+            username:''
+        })
+       }else{ alert('NOT OK'); } }).catch(function (error) { alert('NOT OK.'); }); } catch (err) { alert('NOT OK.'); 
+
+    
     }
 
     render() {
@@ -44,7 +48,7 @@ background: 'linear-gradient(90deg, rgba(63,238,230,1) 0%, rgba(69,162,158,1) 35
               <div className='form-group'>
                     <label className="form-label"  >Username :</label>
                     <input type='text'
-                    required
+                    required placeholder='name should have minimum three letters'
                     className='form-control'
                     value={this.state.username}
                     onChange={this.onChangeUsername}/>
